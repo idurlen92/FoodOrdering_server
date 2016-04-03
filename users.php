@@ -20,15 +20,15 @@
 
 	function getUser($dbHandler){
 		$resultArray = array('isError' => false, 'errorMsg' => '', 'user' => array());
-		if(!isset($_GET[UsersTable::$COL_EMAIL]) || !isset($_GET[UsersTable::$COL_PASSWORD])){
+		if(!isset($_GET[UsersTable::COL_EMAIL]) || !isset($_GET[UsersTable::COL_PASSWORD])){
 			$resultArray['isError'] = true;
             $resultArray['errorMsg'] = 'Missing GET params';
 		}
 		else{
-			$sQuery = 'SELECT * FROM ' . UsersTable::$TABLE_NAME .
-						' WHERE ' . UsersTable::$COL_EMAIL . ' = ? '. 
-						' AND ' . UsersTable::$COL_PASSWORD . ' = ?';
-			$resultArray['user'] = $dbHandler->executeSelect($sQuery, array($_GET[UsersTable::$COL_EMAIL], $_GET[UsersTable::$COL_PASSWORD]));
+			$sQuery = 'SELECT * FROM ' . UsersTable::TABLE_NAME .
+						' WHERE ' . UsersTable::COL_EMAIL . ' = ? '. 
+						' AND ' . UsersTable::COL_PASSWORD . ' = ?';
+			$resultArray['user'] = $dbHandler->executeSelect($sQuery, array($_GET[UsersTable::COL_EMAIL], $_GET[UsersTable::COL_PASSWORD]));
 		}
 		
 		return $resultArray;
@@ -38,13 +38,13 @@
 
 	function insertUser($dbHandler){
 		$tableColumns = array(
-      		UsersTable::$COL_FIRST_NAME , UsersTable::$COL_LAST_NAME, UsersTable::$COL_EMAIL, UsersTable::$COL_PASSWORD,
-      		UsersTable::$COL_CITY, UsersTable::$COL_ADDRESS, UsersTable::$COL_BIRTH_DATE
+      		UsersTable::COL_FIRST_NAME , UsersTable::COL_LAST_NAME, UsersTable::COL_EMAIL, UsersTable::COL_PASSWORD,
+      		UsersTable::COL_CITY, UsersTable::COL_ADDRESS, UsersTable::COL_BIRTH_DATE
       	);
 
 		$resultArray = array('isError' => false, 'errorMsg' => '');
 
-		$sInsertCols = 'INSERT INTO ' . UsersTable::$TABLE_NAME . '(';
+		$sInsertCols = 'INSERT INTO ' . UsersTable::TABLE_NAME . '(';
 		$sInsertVals = ' VALUES(';
 		$aInsertParams = array();
 		

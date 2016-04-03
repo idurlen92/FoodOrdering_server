@@ -1,4 +1,5 @@
 <?php
+include 'Utils.php';
 
 class DatabaseHandler {
 
@@ -94,7 +95,25 @@ class DatabaseHandler {
         try{
             $pdoStatement = self::$pdo_object->prepare($query);
             $pdoStatement->execute($arguments);
-            $data = $pdoStatement->fetchAll(PDO::FETCH_ASSOC);
+            
+            $result = $pdoStatement->fetchAll(PDO::FETCH_ASSOC);
+            
+            if(empty($result)){
+                $data = $result;
+            }
+            else{
+                if(Utils::isAssocArray($result)){
+                    $data = Utils::colsToCamelCase($result);
+                }
+                else{
+                    $i=0;
+                    foreach($result as $key => $value){
+                        $data[$i++] = Utils::colsToCamelCase($value);
+                    }
+                }
+            }
+
+
             $pdoStatement = null;
         }
         catch(PDOException $e){

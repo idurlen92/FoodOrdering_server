@@ -1,0 +1,339 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"print_",
+				"printer_list"
+			],
+			[
+				"sCol",
+				"sColumnCamelCase"
+			],
+			[
+				"table",
+				"tableColumns"
+			],
+			[
+				"sI",
+				"sInsertStatement"
+			],
+			[
+				"tabl",
+				"tableColumns"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"exe",
+				"executeSelect"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 104.0,
+		"last_filter": "Package Control: install",
+		"selected_items":
+		[
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: INsta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: IN",
+				"Package Control: Install Package"
+			],
+			[
+				"Pack",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+			"Package Control: Install Package",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"	",
+			"Package Control: Install Package"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/xampp/htdocs/food_ordering"
+	],
+	"file_history":
+	[
+		"/C/xampp/htdocs/food_ordering/users.php",
+		"/C/xampp/htdocs/food_ordering/FoodOrdering.sublime-project",
+		"/C/xampp/htdocs/food_ordering/DatabaseHandler.php",
+		"/C/Users/Duky/Desktop/db.sql",
+		"/C/Users/Duky/AppData/Local/Temp/Temp1_PHP_skripte.zip/PHP_skripte/baza.php",
+		"/C/Users/Duky/AppData/Local/Temp/Temp1_PHP_skripte.zip/PHP_skripte/Server.php",
+		"/C/Users/Duky/AppData/Local/Temp/Temp1_PHP_skripte.zip/PHP_skripte/Client.php",
+		"/C/Users/Duky/AppData/Local/Temp/Temp1_PHP_skripte.zip/PHP_skripte/AndroidClient.php",
+		"/C/Users/Duky/AppData/Local/Temp/Temp1_PHP_skripte.zip/PHP_skripte/AndroidService.php",
+		"/C/xampp/htdocs/food_ordering/dish_types.php",
+		"/C/xampp/htdocs/food_ordering/restaurants.php",
+		"/C/xampp/htdocs/food_ordering/Utils.php",
+		"/C/xampp/htdocs/food_ordering/UsersTable.php",
+		"/C/xampp/htdocs/food_ordering/RestaurantsTable.php",
+		"/C/xampp/htdocs/food_ordering/DishTypesTable.php",
+		"/C/xampp/htdocs/food_ordering/dishes.php",
+		"/C/xampp/htdocs/food_ordering/DishesTable.php",
+		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/database/helper/DatabaseTable.java",
+		"/C/xampp/htdocs/food_ordering/DatabaseTable.php",
+		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/database/helper/Dishes.java",
+		"/C/xampp/htdocs/food_ordering/DishesTable - Copy.php",
+		"/C/xampp/htdocs/food_ordering/dishes - Copy.php",
+		"/C/xampp/htdocs/food_ordering/DishTypes.php",
+		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/database/helper/DishTypes.java",
+		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/database/helper/Restaurants.java",
+		"/C/xampp/php/php.ini",
+		"/C/xampp/htdocs/food_ordering/user.php",
+		"/C/xampp/htdocs/food_ordering/Users).php",
+		"/C/Users/Duky/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Duky/Desktop/ajax_registration.php",
+		"/C/xampp/htdocs/food_ordering/config.ini",
+		"/C/xampp/xampp-control.ini",
+		"/C/xampp/mysql/bin/my.ini",
+		"/C/Users/Duky/Desktop/users.php",
+		"/C/xampp/htdocs/food_ordering/index.php",
+		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/database/helper/OrderItems.java",
+		"/C/Users/Duky/Desktop/nikolam1_food_ordering.sql",
+		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/database/helper/Orders.java",
+		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/database/helper/HelperMethods.java",
+		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/database/helper/Users.java",
+		"/C/Users/Duky/AndroidStudioProjects/TestApp/app/build.gradle",
+		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/utils/async/BackgroundOperation.java",
+		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/utils/async/BackgroundTask.java",
+		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/controller/RestaurantController.java",
+		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/database/DatabaseManager.java",
+		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/view/MainActivity.java",
+		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/controller/HomeController.java",
+		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/view/fragment/RestaurantFragment.java",
+		"/C/Users/Duky/AndroidStudioProjects/ExampleApp/app/src/main/java/test/example/com/exampleapp/LoginActivity.java",
+		"/C/Users/Duky/AndroidStudioProjects/ExampleApp/app/src/main/res/layout/activity_login.xml",
+		"/C/Users/Duky/AndroidStudioProjects/ExampleApp/app/src/main/res/layout/content_show.xml",
+		"/C/Users/Duky/AppData/Local/Temp/Temp1_Bravel - ture.zip/Bravel - ture/src/com/prolink/rute/ServisiAdapter.java",
+		"/C/Users/Duky/AppData/Local/Temp/Temp1_Bravel - ture.zip/Bravel - ture/src/com/prolink/rute/StartActivity.java",
+		"/C/Users/Duky/AppData/Local/Temp/Temp1_Bravel - ture.zip/Bravel - ture/src/com/prolink/rute/VozaciGrupeAdapter.java",
+		"/C/Users/Duky/AppData/Local/Temp/Temp1_Bravel - ture.zip/Bravel - ture/src/com/prolink/rute/VozaciAdapter.java",
+		"/C/Users/Duky/AppData/Local/Temp/Temp1_Bravel - ture.zip/Bravel - ture/src/com/prolink/rute/PocetnaActivity.java",
+		"/C/Users/Duky/AppData/Local/Temp/Temp1_Bravel - ture.zip/Bravel - ture/src/com/prolink/rute/OdredisteClass.java",
+		"/C/Users/Duky/AppData/Local/Microsoft/Windows/INetCache/IE/ZF33HAET/activity_pocetna[1].xml",
+		"/C/Users/Duky/AppData/Local/Temp/Temp1_Bravel - ture.zip/Bravel - ture/src/com/prolink/rute/TureActivity.java",
+		"/C/Users/Duky/AppData/Local/Temp/Temp1_Bravel - ture.zip/Bravel - ture/src/com/prolink/rute/TureAdapter.java",
+		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/res/drawable-v21/ic_menu_share.xml",
+		"/C/Users/Duky/AppData/Local/Temp/Temp1_Bravel - servisi.zip/Bravel - servisi/src/com/prolink/vozaci/InputActivity.java",
+		"/C/Users/Duky/AppData/Local/Temp/Temp1_Bravel - servisi.zip/Bravel - servisi/src/com/prolink/vozaci/ListActivity.java",
+		"/F/1Password 2016-02-29, 09_37 PM (19 items and 0 folders).csv",
+		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/.gitignore",
+		"/C/Users/Duky/AndroidStudioProjects/ExampleApp/app/src/main/java/test/example/com/exampleapp/DatabaseHandler.java",
+		"/C/Users/Duky/AppData/Roaming/Sublime Text 3/Packages/User/mavensmate.sublime-settings",
+		"/C/Users/Duky/AppData/Roaming/Sublime Text 3/Packages/MavensMate/mavensmate.sublime-settings",
+		"/C/Users/Duky/Desktop/js_example.js",
+		"/C/Users/Duky/Mars_workspace/TestCore/src/com/duky/test/Main.java",
+		"/C/Users/Duky/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"COLLATE utf8_croatian_ci",
+			"COLLATE=utf8_croatian_ci",
+			"primary",
+			"index",
+			"::$",
+			"public static $",
+			" =",
+			"public static const $",
+			"public static $",
+			" $",
+			"final String",
+			"error",
+			"\\",
+			"showProgress",
+			"SumarijeRead"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"::",
+			"const ",
+			",",
+			"define(",
+			"$",
+			"",
+			"/"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.MavensMate-OutputPanel":
+	{
+		"height": 118.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "FoodOrdering.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 292.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
