@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"res",
+				"$resultArray〔variable〕"
+			],
+			[
 				"print_",
 				"printer_list"
 			],
@@ -117,8 +121,12 @@
 	],
 	"file_history":
 	[
-		"/C/xampp/htdocs/food_ordering/users.php",
+		"/C/xampp/htdocs/food_ordering/orders.php",
+		"/C/xampp/htdocs/food_ordering/restaurants.php",
 		"/C/xampp/htdocs/food_ordering/FoodOrdering.sublime-project",
+		"/C/xampp/htdocs/food_ordering/OrdersTable.php",
+		"/C/xampp/htdocs/food_ordering/DishesTable.php",
+		"/C/xampp/htdocs/food_ordering/users.php",
 		"/C/xampp/htdocs/food_ordering/DatabaseHandler.php",
 		"/C/Users/Duky/Desktop/db.sql",
 		"/C/Users/Duky/AppData/Local/Temp/Temp1_PHP_skripte.zip/PHP_skripte/baza.php",
@@ -127,13 +135,11 @@
 		"/C/Users/Duky/AppData/Local/Temp/Temp1_PHP_skripte.zip/PHP_skripte/AndroidClient.php",
 		"/C/Users/Duky/AppData/Local/Temp/Temp1_PHP_skripte.zip/PHP_skripte/AndroidService.php",
 		"/C/xampp/htdocs/food_ordering/dish_types.php",
-		"/C/xampp/htdocs/food_ordering/restaurants.php",
 		"/C/xampp/htdocs/food_ordering/Utils.php",
 		"/C/xampp/htdocs/food_ordering/UsersTable.php",
 		"/C/xampp/htdocs/food_ordering/RestaurantsTable.php",
 		"/C/xampp/htdocs/food_ordering/DishTypesTable.php",
 		"/C/xampp/htdocs/food_ordering/dishes.php",
-		"/C/xampp/htdocs/food_ordering/DishesTable.php",
 		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/database/helper/DatabaseTable.java",
 		"/C/xampp/htdocs/food_ordering/DatabaseTable.php",
 		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/database/helper/Dishes.java",
@@ -205,6 +211,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"getRestaurants",
+			"getOrdersOfUser",
 			"COLLATE utf8_croatian_ci",
 			"COLLATE=utf8_croatian_ci",
 			"primary",
@@ -227,6 +235,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"getOrdersOfUser",
 			"",
 			"::",
 			"const ",
@@ -242,6 +251,12 @@
 		"whole_word": false,
 		"wrap": true
 	},
+	"folders":
+	[
+		{
+			"path": "C:\\xampp\\htdocs\\food_ordering"
+		}
+	],
 	"groups":
 	[
 		{
@@ -290,7 +305,7 @@
 		"height": 0.0
 	},
 	"pinned_build_system": "",
-	"project": "FoodOrdering.sublime-project",
+	"project": "",
 	"replace":
 	{
 		"height": 62.0

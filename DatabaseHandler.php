@@ -1,12 +1,11 @@
 <?php
-include 'Utils.php';
 
 class DatabaseHandler {
 
     /**@var PDO */
     private static $pdo_object = null;
 	/**@var string */
-	public static $lastError = null;
+	private static $lastError = null;
 
 	/**@var DatabaseHandler*/
 	private static $instance = null;
@@ -62,7 +61,7 @@ class DatabaseHandler {
 	 * Returns last error message from catched exception.
 	 * @return string | null
 	 */
-	public static function getLastError(){
+	public function getLastError(){
 		$error = self::$lastError;
 		self::$lastError = null;
 		return $error;
@@ -88,9 +87,10 @@ class DatabaseHandler {
      * * Note: if no arguments expected pass empty array!
      * @param $query
      * @param $arguments
+     * @param isToCamelCase
      * @return null | array
      */
-    public function executeSelect($query, $arguments){
+    public function executeSelect($query, $arguments, $isToCamelCase = true){
         $data = null;
         try{
             $pdoStatement = self::$pdo_object->prepare($query);
@@ -101,7 +101,7 @@ class DatabaseHandler {
             if(empty($result)){
                 $data = $result;
             }
-            else{
+            else if($isToCamelCase){
                 if(Utils::isAssocArray($result)){
                     $data = Utils::colsToCamelCase($result);
                 }
@@ -112,7 +112,6 @@ class DatabaseHandler {
                     }
                 }
             }
-
 
             $pdoStatement = null;
         }

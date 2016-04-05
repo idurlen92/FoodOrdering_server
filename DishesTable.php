@@ -11,7 +11,4 @@ class DishesTable{
 	const COL_PRICE = "price";
 	const COL_DESCRIPTION = "description";
 
-
-
-
 }

@@ -1,4 +1,5 @@
 <?php
+	include 'Utils.php';
 	include 'DatabaseHandler.php';
 	include 'RestaurantsTable.php';
 	header('Content-Type: application/json');

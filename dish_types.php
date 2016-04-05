@@ -1,4 +1,5 @@
 <?php
+	include 'Utils.php';
 	include 'DatabaseHandler.php';
 	include 'DishTypesTable.php';
 	header('Content-Type: application/json');
@@ -21,7 +22,7 @@
 	function getDishTypes($dbHandler){
 		$resultArray = array('isError' => false, 'errorMsg' => '');
 		$sQuery = 'SELECT * FROM ' . DishTypesTable::TABLE_NAME . 
-					' ORDER BY id ASC';
+					' ORDER BY ' . DishTypesTable::COL_ID . ' ASC';
 		$resultArray['dishTypes'] = $dbHandler->executeSelect($sQuery, array());
 		return $resultArray;
 	}

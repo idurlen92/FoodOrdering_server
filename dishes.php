@@ -1,4 +1,5 @@
 <?php
+	include 'Utils.php';
 	include 'DatabaseHandler.php';
 	include 'DishesTable.php';
 	header('Content-Type: application/json');
@@ -7,7 +8,7 @@
 	$resultArray = array();
 
 	if($_SERVER['REQUEST_METHOD'] === 'GET'){
-		$resultArray = getDishTypes($dbHandler);
+		$resultArray = getDishes($dbHandler);
 	}
 	else{
 		$resultArray = array('isError' => true, 'errorMsg' => 'Wrong method');
@@ -17,10 +18,10 @@
 	exit(0);
 
 
-	function getDishTypes($dbHandler){
+	function getDishes($dbHandler){
 		$resultArray = array('isError' => false, 'errorMsg' => '');
 		$sQuery = 'SELECT * FROM ' . DishesTable::TABLE_NAME . 
-					' ORDER BY id ASC';
+					' ORDER BY ' . DishesTable::COL_ID . ' ASC';
 		$resultArray['dishes'] = $dbHandler->executeSelect($sQuery, array());
 		return $resultArray;
 	}
