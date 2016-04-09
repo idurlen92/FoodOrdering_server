@@ -4,6 +4,54 @@
 		"selected_items":
 		[
 			[
+				"COL",
+				"COL_CITY〔constant〕"
+			],
+			[
+				"c",
+				"createUpdateStatement〔function〕"
+			],
+			[
+				"val",
+				"$value〔variable〕"
+			],
+			[
+				"REQUEST",
+				"REQUEST_URI"
+			],
+			[
+				"inse",
+				"insertOrderItem〔function〕"
+			],
+			[
+				"OR",
+				"COL_ORDER_TIME〔constant〕"
+			],
+			[
+				"co",
+				"COL_PASSWORD〔constant〕"
+			],
+			[
+				"Util",
+				"Utils"
+			],
+			[
+				"Order",
+				"OrderItemsTable"
+			],
+			[
+				"Ord",
+				"OrdersTable〔class〕"
+			],
+			[
+				"Orde",
+				"OrderItemsTable"
+			],
+			[
+				"C",
+				"COL_USER_ID"
+			],
+			[
 				"res",
 				"$resultArray〔variable〕"
 			],
@@ -39,6 +87,22 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "service/users.php",
+			"settings":
+			{
+				"buffer_size": 3125,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "service/Utils.php",
+			"settings":
+			{
+				"buffer_size": 3290,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -117,29 +181,40 @@
 	},
 	"expanded_folders":
 	[
-		"/C/xampp/htdocs/food_ordering"
+		"/C/xampp/htdocs/food_ordering",
+		"/C/xampp/htdocs/food_ordering/service"
 	],
 	"file_history":
 	[
+		"/C/xampp/htdocs/food_ordering/service/UsersTable.php",
+		"/C/xampp/htdocs/food_ordering/service/users.php",
+		"/C/xampp/htdocs/food_ordering/service/Utils.php",
+		"/C/xampp/htdocs/food_ordering/service/DatabaseHandler.php",
+		"/C/xampp/htdocs/food_ordering/service/order_items.php",
+		"/C/xampp/htdocs/food_ordering/service/users/UsersTable.php",
+		"/C/xampp/htdocs/food_ordering/service/users/index.php",
+		"/C/xampp/htdocs/food_ordering/service/users/users.php",
+		"/C/xampp/htdocs/food_ordering/Utils.php",
+		"/C/xampp/htdocs/food_ordering/order_items.php",
 		"/C/xampp/htdocs/food_ordering/orders.php",
-		"/C/xampp/htdocs/food_ordering/restaurants.php",
-		"/C/xampp/htdocs/food_ordering/FoodOrdering.sublime-project",
-		"/C/xampp/htdocs/food_ordering/OrdersTable.php",
-		"/C/xampp/htdocs/food_ordering/DishesTable.php",
 		"/C/xampp/htdocs/food_ordering/users.php",
+		"/C/xampp/htdocs/food_ordering/dishes.php",
+		"/C/xampp/htdocs/food_ordering/dish_types.php",
+		"/C/xampp/htdocs/food_ordering/restaurants.php",
 		"/C/xampp/htdocs/food_ordering/DatabaseHandler.php",
+		"/C/xampp/htdocs/food_ordering/UsersTable.php",
+		"/C/xampp/htdocs/food_ordering/OrdersTable.php",
+		"/C/xampp/htdocs/food_ordering/OrderItemsTable.php",
+		"/C/xampp/htdocs/food_ordering/FoodOrdering.sublime-project",
+		"/C/xampp/htdocs/food_ordering/DishesTable.php",
 		"/C/Users/Duky/Desktop/db.sql",
 		"/C/Users/Duky/AppData/Local/Temp/Temp1_PHP_skripte.zip/PHP_skripte/baza.php",
 		"/C/Users/Duky/AppData/Local/Temp/Temp1_PHP_skripte.zip/PHP_skripte/Server.php",
 		"/C/Users/Duky/AppData/Local/Temp/Temp1_PHP_skripte.zip/PHP_skripte/Client.php",
 		"/C/Users/Duky/AppData/Local/Temp/Temp1_PHP_skripte.zip/PHP_skripte/AndroidClient.php",
 		"/C/Users/Duky/AppData/Local/Temp/Temp1_PHP_skripte.zip/PHP_skripte/AndroidService.php",
-		"/C/xampp/htdocs/food_ordering/dish_types.php",
-		"/C/xampp/htdocs/food_ordering/Utils.php",
-		"/C/xampp/htdocs/food_ordering/UsersTable.php",
 		"/C/xampp/htdocs/food_ordering/RestaurantsTable.php",
 		"/C/xampp/htdocs/food_ordering/DishTypesTable.php",
-		"/C/xampp/htdocs/food_ordering/dishes.php",
 		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/database/helper/DatabaseTable.java",
 		"/C/xampp/htdocs/food_ordering/DatabaseTable.php",
 		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/database/helper/Dishes.java",
@@ -211,6 +286,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"updateVals",
+			"tableColumns",
+			"tableColumnsMandatory",
+			"getDishTypes",
 			"getRestaurants",
 			"getOrdersOfUser",
 			"COLLATE utf8_croatian_ci",
@@ -235,6 +314,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"updateParams",
+			"tableColumnsMandatory",
+			"getDishes",
 			"getOrdersOfUser",
 			"",
 			"::",
@@ -260,8 +342,67 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "service/users.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3125,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1445,
+								1445
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 396.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "service/Utils.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3290,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								154,
+								21
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 54.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -271,7 +412,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 34.0
 	},
 	"layout":
 	{
@@ -346,7 +487,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 292.0,
+	"side_bar_width": 224.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

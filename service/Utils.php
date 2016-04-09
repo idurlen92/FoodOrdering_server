@@ -3,7 +3,8 @@
 class Utils{
 
 	const ERROR_MSG = 'errorMessage';
-	const INSERT_ID = 'id';
+	const INSERT_ID = 'insertId';
+	const UPDATE_STATE = 'isUpdated';
 	const STATUS_ERROR = 'isError';
 
 	/**
@@ -90,5 +91,35 @@ class Utils{
 		return array(($sInsertCols . $sInsertVals), $aInsertParams);
 	}
 
+
+	/**
+	 * Creates update statement.
+	 * @param  array  $valuesMap [description]
+	 * @param  [type] $id        [description]
+	 * @param  [type] $tableName [description]
+	 * @return [type]            [description]
+	 */
+	public static function createUpdateStatement(array $valuesMap, array $whereParams, $tableName){
+		$updateStmnt = 'UPDATE ' . $tableName . ' SET ';
+		$updateParams = array();
+		$count = count($valuesMap);
+		$j = 0;
+
+		foreach ($valuesMap as $key => $value) {
+			$updateStmnt .= $key . ' = ? ' . ($j < ($count - 1) ? 'AND ' : '');
+			$updateParams[$j++] = $value;
+		}
+
+		$updateStmnt .= ' WHERE ';
+
+		$count = count($whereParams);
+		$i = 0;
+		foreach ($whereParams as $key => $value) {
+			$updateStmnt .= $key . ' = ? ' . ($i++ < ($count - 1) ? 'AND ' : '');
+			$updateParams[$j++] = $value;
+		}
+
+		return array($updateStmnt, $updateParams);
+	}
 
 }
