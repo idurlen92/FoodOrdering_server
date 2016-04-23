@@ -44,7 +44,7 @@
 	function insertOrder($dbHandler){
 		$paramsMandatory = array(
       		OrdersTable::COL_USER_ID, OrdersTable::COL_RESTAURANT_ID, OrdersTable::COL_ORDER_CITY,
-      		OrdersTable::COL_ORDER_ADDRESS, OrdersTable::COL_ORDER_TIME
+      		OrdersTable::COL_ORDER_ADDRESS, OrdersTable::COL_ORDER_TIME, OrdersTable::COL_DELIVERY_TIME
       	);
 		
 		$resultArray = Utils::isValidParams($_POST, $paramsMandatory);

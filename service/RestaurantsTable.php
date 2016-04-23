@@ -11,9 +11,9 @@ class RestaurantsTable {
 	const COL_DESCRIPTION = "description";
 	const COL_EMAIL = "email";
 	const COL_PHONE = "phone";
-	const COL_WORKS_FROM = "working_from";
-	const COL_WORKS_TO = "working_until";
-	const COL_ORDERS_FROM = "ordering_from";
-	const COL_ORDERS_TO = "ordering_until";
+	const COL_WORKING_FROM = "working_from";
+	const COL_WORKING_UNTIL = "working_until";
+	const COL_DELIVERING_FROM = "delivering_from";
+	const COL_DELIVERING_UNTIL = "delivering_until";
 
 }

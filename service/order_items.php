@@ -50,7 +50,7 @@
 
 
 	function insertOrderItem($dbHandler){
-		$paramsMandatory = array(
+		/*$paramsMandatory = array(
       		OrderItemsTable::COL_DISH_ID, OrderItemsTable::COL_ORDER_ID, OrderItemsTable::COL_QUANTITY
       	);
 		
@@ -63,5 +63,14 @@
 			}
 		}
 
-		return $resultArray;
+		return $resultArray;*/
+
+		$resultArray = json_decode($_POST['items'], true);
+		$s = '';
+		foreach($resultArray as $key => $val){
+			foreach($val as $k => $v){
+				$s .= $k . ';' . $v . '\n';	
+			}
+		}
+		return $s;
 	}
