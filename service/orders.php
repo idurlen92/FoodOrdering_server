@@ -58,6 +58,7 @@
 				$resultArray[Utils::INSERT_ID] = $dbHandler->getLastInsertId();
 			}
 			else{
+				$resultArray[Utils::STATUS_ERROR] = true;
 				$resultArray[Utils::ERROR_MSG] = $dbHandler->getLastError();
 				$resultArray[Utils::INSERT_ID] = -1;
 			}

@@ -29,7 +29,7 @@
 	 * @return string - list of order items
 	 */
 	function getOrdersItemsOfUser($dbHandler){
-		$resultArray = array('isError' => false, 'errorMsg' => '');
+		$resultArray = array(Utils::STATUS_ERROR => true, Utils::ERROR_MSG => '');
 		
 		if(!isset($_GET[OrdersTable::COL_USER_ID])){
 			$resultArray['isError'] = false;
@@ -49,28 +49,45 @@
 
 
 
+	/**
+	 * Inserts multiple Order Items from json array string
+	 * @param  [type] $dbHandler [description]
+	 * @return [type]            [description]
+	 */
 	function insertOrderItem($dbHandler){
-		/*$paramsMandatory = array(
+		$resultArray = array(Utils::STATUS_ERROR => false, Utils::ERROR_MSG => '');
+
+		$arrayKey = 'orderItems';
+		if(!isset($_POST[$arrayKey])){
+			return array(Utils::STATUS_ERROR => true, Utils::ERROR_MSG => "Missing argument '{$arrayKey}'");
+		}
+
+		// ---------- Decode json to assoc array and put to DB ----------
+		//orderItems=[{"dish_id":1,"order_id":1,"quantity":3},{"dish_id":2,"order_id":1,"quantity":3}]
+		$orderItemsArray = json_decode($_POST['orderItems'], true);
+		
+		// ---------- Perform DB transaction ---------
+		$paramsMandatory = array(
       		OrderItemsTable::COL_DISH_ID, OrderItemsTable::COL_ORDER_ID, OrderItemsTable::COL_QUANTITY
       	);
-		
-		$resultArray = Utils::isValidParams($_POST, $paramsMandatory);
+		$dbHandler->beginTransaction();
 
-		if(!$resultArray[Utils::STATUS_ERROR]){
-			$aInsertParams = Utils::createInsertStatement($_POST, OrderItemsTable::TABLE_NAME);
+		// --------- Insert data ----------
+		foreach($orderItemsArray as $index => $orderItem){
+			$resultArray = Utils::isValidParams($orderItem, $paramsMandatory);
+			if($resultArray[Utils::STATUS_ERROR]){
+				return $resultArray;
+			}
+
+			$aInsertParams = Utils::createInsertStatement($orderItem, OrderItemsTable::TABLE_NAME);
 			if(! $dbHandler->execNonSelect($aInsertParams[0], $aInsertParams[1])){
-				$resultArray[Utils::ERROR_MSG] = $dbHandler->getLastError();
+				//---------- Roll back transaction and return error ----------
+				$dbHandler->rollBackTransaction();
+				return array(Utils::STATUS_ERROR => true, Utils::ERROR_MSG => 'INSERT: ' . $dbHandler->getLastError());
 			}
 		}
 
-		return $resultArray;*/
-
-		$resultArray = json_decode($_POST['items'], true);
-		$s = '';
-		foreach($resultArray as $key => $val){
-			foreach($val as $k => $v){
-				$s .= $k . ';' . $v . '\n';	
-			}
-		}
-		return $s;
+		// ---------- Commit transaction and return data ----------
+		$dbHandler->commitTransaction();
+		return $resultArray;
 	}

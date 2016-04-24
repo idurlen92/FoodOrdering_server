@@ -33,7 +33,7 @@
 		else{
 			$sQuery = 'SELECT ' . UsersTable::COL_ID . ',' . UsersTable::COL_FIRST_NAME .  ',' .
 						UsersTable::COL_LAST_NAME . ',' . UsersTable::COL_EMAIL . ',' .
-						UsersTable::COL_CITY . ',' . UsersTable::COL_ADDRESS . ' ' .
+						UsersTable::COL_CITY . ',' . UsersTable::COL_ADDRESS . ',' .
 						UsersTable::COL_BIRTH_DATE .
 						' FROM ' . UsersTable::TABLE_NAME .
 						' WHERE ' . UsersTable::COL_EMAIL . ' = ? '. 

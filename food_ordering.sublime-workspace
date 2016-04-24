@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"is",
+				"isValidParams〔function〕"
+			],
+			[
+				"json",
+				"json_decode〔function〕"
+			],
+			[
 				"COL",
 				"COL_CITY〔constant〕"
 			],
@@ -76,10 +84,6 @@
 				"tableColumns"
 			],
 			[
-				"json",
-				"json_encode"
-			],
-			[
 				"exe",
 				"executeSelect"
 			]
@@ -88,18 +92,26 @@
 	"buffers":
 	[
 		{
-			"file": "service/users.php",
-			"settings":
-			{
-				"buffer_size": 3125,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "service/Utils.php",
 			"settings":
 			{
 				"buffer_size": 3290,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "service/UsersTable.php",
+			"settings":
+			{
+				"buffer_size": 446,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "service/users.php",
+			"settings":
+			{
+				"buffer_size": 3125,
 				"line_ending": "Windows"
 			}
 		}
@@ -186,11 +198,27 @@
 	],
 	"file_history":
 	[
-		"/C/xampp/htdocs/food_ordering/service/UsersTable.php",
 		"/C/xampp/htdocs/food_ordering/service/users.php",
 		"/C/xampp/htdocs/food_ordering/service/Utils.php",
-		"/C/xampp/htdocs/food_ordering/service/DatabaseHandler.php",
 		"/C/xampp/htdocs/food_ordering/service/order_items.php",
+		"/C/xampp/htdocs/food_ordering/service/orders.php",
+		"/C/xampp/htdocs/food_ordering/service/DatabaseHandler.php",
+		"/C/xampp/htdocs/food_ordering/service/dishes.php",
+		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/controller/Controller.java",
+		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/controller/ConfirmOrderController.java",
+		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/controller/HomeController.java",
+		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/controller/MainController.java",
+		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/controller/LoginController.java",
+		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/controller/MenuController.java",
+		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/controller/RegisterController.java",
+		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/controller/RestaurantController.java",
+		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/controller/SettingsController.java",
+		"/C/xampp/htdocs/food_ordering/service/RestaurantsTable.php",
+		"/C/xampp/htdocs/food_ordering/service/restaurants.php",
+		"/C/xampp/htdocs/food_ordering/service/OrdersTable.php",
+		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/net/DishesRequest.java",
+		"/C/xampp/htdocs/food_ordering/service/OrderItemsTable.php",
+		"/C/xampp/htdocs/food_ordering/service/UsersTable.php",
 		"/C/xampp/htdocs/food_ordering/service/users/UsersTable.php",
 		"/C/xampp/htdocs/food_ordering/service/users/index.php",
 		"/C/xampp/htdocs/food_ordering/service/users/users.php",
@@ -241,10 +269,8 @@
 		"/C/Users/Duky/AndroidStudioProjects/TestApp/app/build.gradle",
 		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/utils/async/BackgroundOperation.java",
 		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/utils/async/BackgroundTask.java",
-		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/controller/RestaurantController.java",
 		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/database/DatabaseManager.java",
 		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/view/MainActivity.java",
-		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/controller/HomeController.java",
 		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/view/fragment/RestaurantFragment.java",
 		"/C/Users/Duky/AndroidStudioProjects/ExampleApp/app/src/main/java/test/example/com/exampleapp/LoginActivity.java",
 		"/C/Users/Duky/AndroidStudioProjects/ExampleApp/app/src/main/res/layout/activity_login.xml",
@@ -342,40 +368,11 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "service/users.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3125,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1445,
-								1445
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 396.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "service/Utils.php",
 					"semi_transient": false,
 					"settings":
@@ -387,8 +384,8 @@
 						"selection":
 						[
 							[
-								154,
-								21
+								0,
+								0
 							]
 						],
 						"settings":
@@ -397,10 +394,69 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 54.0,
+						"translation.y": 486.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "service/UsersTable.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 446,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "service/users.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3125,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1061,
+								1061
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 432.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -487,7 +543,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 224.0,
+	"side_bar_width": 211.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
