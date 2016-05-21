@@ -37,9 +37,11 @@
 						UsersTable::COL_BIRTH_DATE .
 						' FROM ' . UsersTable::TABLE_NAME .
 						' WHERE ' . UsersTable::COL_EMAIL . ' = ? '. 
-						' AND ' . UsersTable::COL_PASSWORD . ' = ?';
-			$resultArray['user'] = $dbHandler->executeSelect($sQuery, array($_GET[UsersTable::COL_EMAIL], 
-			                                                                $_GET[UsersTable::COL_PASSWORD]))[0];
+						' AND ' . UsersTable::COL_PASSWORD . ' = ? ' .
+						' AND ' . UsersTable::COL_IS_ACTIVE . ' = 1';
+			$user = $dbHandler->executeSelect($sQuery, array($_GET[UsersTable::COL_EMAIL], 
+			                                                                $_GET[UsersTable::COL_PASSWORD]));
+			$resultArray['user'] = count($user) > 0 ? $user[0] : array();
 		}
 		
 		return $resultArray;
@@ -52,16 +54,33 @@
       		UsersTable::COL_FIRST_NAME , UsersTable::COL_LAST_NAME, UsersTable::COL_EMAIL, UsersTable::COL_PASSWORD,
       		UsersTable::COL_CITY, UsersTable::COL_ADDRESS
       	);
-		
+
 		$resultArray = Utils::isValidParams($_POST, $paramsMandatory);
 
 		if($resultArray[Utils::STATUS_ERROR]){
 			$resultArray[Utils::INSERT_ID] = 0;
 		}
 		else{
-			$aInsertParams = Utils::createInsertStatement($_POST, UsersTable::TABLE_NAME);
+			$insertCols = array();
+			foreach ($_POST as $key => $value) {
+				$insertCols[$key] = $value;
+			}
+			
+			// -------- Generate activation code ---------
+			$insertCols[UsersTable::COL_ACTIVATION_CODE] = Utils::generateActivationCode();
+
+			// ----- Generate timestamp ----------
+			$timestampArray = $dbHandler->executeSelect('SELECT DATE_ADD(NOW(), INTERVAL 48 HOUR) t', array());
+			$timestamp = $timestampArray[0]['t'];
+
+			$insertCols[UsersTable::COL_CODE_VALID_UNTIL] =  $timestamp;
+
+			// --------- Perform insert ---------
+			$aInsertParams = Utils::createInsertStatement($insertCols, UsersTable::TABLE_NAME);
 			if($dbHandler->execNonSelect($aInsertParams[0], $aInsertParams[1])){
 				$resultArray[Utils::INSERT_ID] = $dbHandler->getLastInsertId();
+				Utils::sendActivationEmail($insertCols[UsersTable::COL_EMAIL], $insertCols[UsersTable::COL_FIRST_NAME], 
+				                           $insertCols[UsersTable::COL_ACTIVATION_CODE]);
 			}
 			else{
 				$resultArray[Utils::ERROR_MSG] = $dbHandler->getLastError();

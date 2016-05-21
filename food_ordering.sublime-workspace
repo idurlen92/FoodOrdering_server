@@ -4,16 +4,44 @@
 		"selected_items":
 		[
 			[
+				"e",
+				"execNonSelect〔function〕"
+			],
+			[
+				"time",
+				"timestamp"
+			],
+			[
+				"getI",
+				"getInstance〔function〕"
+			],
+			[
+				"rest",
+				"$resultArray〔variable〕"
+			],
+			[
+				"A",
+				"COL_ACTIVATION_CODE〔constant〕"
+			],
+			[
+				"COL",
+				"COL_IS_ACTIVE〔constant〕"
+			],
+			[
+				"act",
+				"$activationCode〔variable〕"
+			],
+			[
+				"sta",
+				"static"
+			],
+			[
 				"is",
 				"isValidParams〔function〕"
 			],
 			[
 				"json",
 				"json_decode〔function〕"
-			],
-			[
-				"COL",
-				"COL_CITY〔constant〕"
 			],
 			[
 				"c",
@@ -91,30 +119,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "service/Utils.php",
-			"settings":
-			{
-				"buffer_size": 3290,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "service/UsersTable.php",
-			"settings":
-			{
-				"buffer_size": 446,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "service/users.php",
-			"settings":
-			{
-				"buffer_size": 3125,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -198,11 +202,16 @@
 	],
 	"file_history":
 	[
-		"/C/xampp/htdocs/food_ordering/service/users.php",
+		"/C/xampp/htdocs/food_ordering/service/activation.php",
+		"/C/xampp/htdocs/food_ordering/service/DatabaseHandler.php",
+		"/C/Users/Duky/AppData/Local/Temp/fz3temp-1/index.php",
 		"/C/xampp/htdocs/food_ordering/service/Utils.php",
+		"/C/xampp/htdocs/food_ordering/service/users.php",
+		"/C/xampp/htdocs/food_ordering/service/index.php",
+		"/C/Users/Duky/AppData/Local/Temp/fz3temp-1/Utils.php",
+		"/C/xampp/htdocs/food_ordering/service/UsersTable.php",
 		"/C/xampp/htdocs/food_ordering/service/order_items.php",
 		"/C/xampp/htdocs/food_ordering/service/orders.php",
-		"/C/xampp/htdocs/food_ordering/service/DatabaseHandler.php",
 		"/C/xampp/htdocs/food_ordering/service/dishes.php",
 		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/controller/Controller.java",
 		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/controller/ConfirmOrderController.java",
@@ -218,7 +227,6 @@
 		"/C/xampp/htdocs/food_ordering/service/OrdersTable.php",
 		"/C/Users/Duky/AndroidStudioProjects/FoodOrdering2/app/src/main/java/com/idurlen/foodordering/net/DishesRequest.java",
 		"/C/xampp/htdocs/food_ordering/service/OrderItemsTable.php",
-		"/C/xampp/htdocs/food_ordering/service/UsersTable.php",
 		"/C/xampp/htdocs/food_ordering/service/users/UsersTable.php",
 		"/C/xampp/htdocs/food_ordering/service/users/index.php",
 		"/C/xampp/htdocs/food_ordering/service/users/users.php",
@@ -312,6 +320,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			".",
+			"'",
 			"updateVals",
 			"tableColumns",
 			"tableColumnsMandatory",
@@ -340,6 +350,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"",
 			"updateParams",
 			"tableColumnsMandatory",
 			"getDishes",
@@ -368,97 +379,8 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "service/Utils.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3290,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 486.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "service/UsersTable.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 446,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "service/users.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3125,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1061,
-								1061
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 432.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],

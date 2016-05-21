@@ -122,4 +122,78 @@ class Utils{
 		return array($updateStmnt, $updateParams);
 	}
 
+
+	/**
+	 * Generates activation code, used for registering a new user.
+	 * @return [string] generated activation code
+	 */
+	public static function generateActivationCode(){
+		$activationCode = '';
+		
+		$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        for ($i = 0; $i < 44; $i++) {
+            $activationCode .= $characters[rand(0, strlen($characters)-1)];
+        }
+
+		$activationCode .= date('YmdHis');//16 chars
+
+		return $activationCode;
+	}
+
+
+	/**
+	 * Sends activation after registering a new user.
+	 * @param  [type] $receiverEmail  [description]
+	 * @param  [type] $name           [description]
+	 * @param  [type] $activationCode [description]
+	 * @return [type]                 [description]
+	 */
+	public static function sendActivationEmail($receiverEmail, $name, $activationCode){
+		$headers = "From:" . strip_tags('info@food_ordering.hr') . "\r\n";
+		$headers .= "MIME-Version: 1.0\r\n";
+		$headers .= "Content-Type:text/html;charset=UTF-8\r\n";
+
+		$subject = 'Aktivacija korisničkog računa';
+
+		$url = 'http://www.nikola-markotic.from.hr/food_ordering/service/activation.php?code=' . $activationCode;
+		$message = 
+		'<html>' .
+			'<head>' .
+				'<title>Aktivacija računa</title>' .
+				'<style>' .
+					'body{' .
+						'background-color: #d3d9de;' . 
+						'color: #595959;' .
+						'font-family: "Helvetica", "Times New Roman", "sans-serif";' . 
+						'font-size: 14px;' .
+					'}' .
+					'#content {text-align: center; margin: 5em 1em;}'.
+					'h1, h2 { color: #1a1a1a; font-family: Arial, "sanes-serif"}' .
+					'h1{ font-size: 32px;}' .
+					'h2{ font-size: 22px; color: #595959}' .
+					'a {' . 
+						'text-decoration: none;' .
+						'color: #1a1a1a;' .
+						'font-weight: bold;' .
+					'}' .
+					'a:hover{' .
+						'font-size: 18px;' .
+					'}' .
+				'</style>' .
+			'</head>' .
+			'<body>' .
+				'<div id="content">' .
+					'<h1> Food ordering </h1>' .
+					'<h2>Aktivacija korisničkog računa</h1>' .
+					'<p> Poštovani ' . $name . ', <br/>' . 
+					'za aktivaciju Vašeg korisničkog računa kliknite na sljedeći ' .
+					'<a href="' . $url . '" target="_blank"> link </a></p><br/>' .
+					'<p> Vaš <span style="font-weight: bold;"> Food ordering </span> tim </p>' .
+				'</div>' .
+			'</body>' .
+		'</html>';
+
+		return mail($receiverEmail, $subject, $message, $headers);
+	}
+
 }
